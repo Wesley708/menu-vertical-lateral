@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        nav{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            background-color: #333;
+            color: white;
+            width: 100vw;
+            height: 80px;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+        nav ul{
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+        }
+        .estado{
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 150px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+        
+        .regiao li:hover .estado{
+            display:flex;
+            flex-direction: column;
+        }
+        
+        nav li{
+            color: white;
+            padding: 15px;
+            text-align: center;
+            color: white;
+        }
+        nav li:hover{
+            background-color: #949494;
+        }
+        nav a{
+            text-decoration: none;
+       
+           
+        }
+        main{
+        margin-top: 80px;
+        padding: 15px;
+        }
+    </style>
+    <title>Menu vertical lateral</title>
+</head>
+<body>
+    <nav>
+        <ul class="regiao">
+            
+            <li>Norte
+                <ul class="estado">
+                    <li>Acre</li>
+                    <li>Amapá</li>
+                    <li>Amazonas</li>
+                    <li>Pará</li>
+                    <li>Rondônia</li>
+                    <li>Roraima</li>
+                    <li>Tocantins</li>
+                </ul>
+            </li>
+            
+            <li>Nordeste
+                <ul class="estado">
+                    <li>Alagos</li>
+                    <li>Bahia</li>
+                    <li>Ceará</li>
+                    <li>Maranhão</li>
+                    <li>Paraíba</li>
+                    <li>Pernambuco</li>
+                    <li>Piauí</li>
+                    <li>Rio Grande do Norte</li>
+                    <li>Sergipe</li>
+                </ul>
+            </li>
+            <li>Centro Oeste
+                <ul class="estado">
+                    <li>Distrito Federal</li>
+                    <li>Goiás</li>
+                    <li>Mato Grosso</li>
+                    <li>Mato Grosso so Sul</li>
+                </ul>
+            </li>
+            <li>Sul
+                <ul class="estado">
+                    <li>Paraná</li>
+                    <li>Rio Grande do Sul</li>
+                    <li>Santa Catarina</li>
+                </ul>
+            </li>
+            <li class="regiao">Sudeste
+                <ul class="estado">
+                    <li>Espirito Santo</li>
+                    <li>Minas Gerais</li>
+                    <li>Rio</li>
+                    <li>São Paulo</li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Bem vindos ao nosso site!</h1>
+        <p>Aqui você encontra informações sobre nossos serviços</p>
+    </main>
+</body>
+</html>
