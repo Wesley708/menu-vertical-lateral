@@ -4,62 +4,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        *{
-            font-family: Arial, Helvetica, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        nav{
-            background-color: #333;
-            color: white;
-            width: 250px;
-            height: 100%;
-            /* position: fixed; */
-            top: 0;
-            left: 0;
-        }
-        nav ul{
-            list-style: none;
-            
-        }
-        nav li{
-            color: white;
-            padding: 15px;
-            text-align: center;
-            color: white;
-        }
-        .estado li:hover{
-            background-color: #949494;
-            cursor: pointer;
-        }
-        nav a{
-            text-decoration: none;
-        }
-       .regiao{
-        background-color: black;
-       }
-       .estado li{
-        background-color: #333;
-       }
-        main{
-        padding: 15px;
-        }
-        body{
-            display: flex;
-            flex-direction: row;
-        }
-    </style>
+       * {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #333;
+    color: white;
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+nav li {
+    list-style: none;
+    position: relative; /* Importante para alinhar o dropdown corretamente */
+    padding: 15px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+}
+
+.regiao {
+    border: 1px solid black;
+}
+
+.regiao:hover {
+    background-color: #535353;
+}
+
+/* Exibe o submenu corretamente */
+nav li:hover .estado {
+    display: block; /* Alterado para block */
+}
+
+.estado {
+    display: none;
+    position: absolute;
+    left: 100%; 
+    top: 0; /* Mantém alinhado com o item do menu */
+    background-color: #333;
+    min-width: 150px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.estado li {
+    width: 150px;
+    background-color: #333;
+    padding: 10px;
+}
+
+.estado li:hover {
+    background-color: #949494;
+    cursor: pointer;
+}
+
+main {
+    padding: 15px;
+    margin-left: 250px;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+}
+
+</style>
     <title>Menu vertical lateral</title>
 </head>
 <body>
     <nav>
-        <ul >
+        <ul">
             
-            <li class="regiao">Norte</li>
+            <li class="regiao">Norte
                 <ul class="estado">
-                    <a href="#">
-                        <li>Acre</li>
-                    </a>
+                    <li>Acre</li>
                     <li>Amapá</li>
                     <li>Amazonas</li>
                     <li>Pará</li>
@@ -67,8 +91,9 @@
                     <li>Roraima</li>
                     <li>Tocantins</li>
                 </ul>
+            </li>
             
-            <li class="regiao">Nordeste</li>
+            <li class="regiao">Nordeste
                 <ul class="estado">
                     <li>Alagos</li>
                     <li>Bahia</li>
@@ -80,26 +105,30 @@
                     <li>Rio Grande do Norte</li>
                     <li>Sergipe</li>
                 </ul>
-            <li class="regiao">Centro Oeste</li>
+            </li>
+            <li class="regiao">Centro Oeste
                 <ul class="estado">
                     <li>Distrito Federal</li>
                     <li>Goiás</li>
                     <li>Mato Grosso</li>
                     <li>Mato Grosso so Sul</li>
                 </ul>
-            <li class="regiao">Sul</li>
+            </li>
+            <li class="regiao">Sul
                 <ul class="estado">
                     <li>Paraná</li>
                     <li>Rio Grande do Sul</li>
                     <li>Santa Catarina</li>
                 </ul>
-                <li class="regiao">Sudeste</li>
+            </li>
+                <li class="regiao">Sudeste
                 <ul class="estado">
                     <li>Espirito Santo</li>
                     <li>Minas Gerais</li>
                     <li>Rio</li>
                     <li>São Paulo</li>
                 </ul>
+            </li>
         </ul>
     </nav>
     <main>
